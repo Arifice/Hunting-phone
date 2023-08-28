@@ -7,24 +7,35 @@
     <!-- daisyUi & taiwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
 <body>
     <header>
         <h1 class="text-5xl">Hunting Phoone</h1>
 
     </header>
-    <main class="container mx-auto mt-4">
+    <main class="container mx-auto my-4">
         <section>
             <div class="bg-gray-300 p-4 m-4 rounded-md">
-                <input id="search-field" type="text" placeholder="search..." class="input text-2xl input-bordered w-full max-w-xs" />
-                <button onclick="searchButton()" class="btn btn-accent">shearch</button>
+                <input id="search-field" type="text" placeholder="Search  here" class="input text-2xl input-bordered input-secondary w-full max-w-xs" />
+                <button onclick="searchButton()" class="btn text-2xl font-[600] hover:bg-green-500 normal-case btn-secondary">Search</button>
+                <!-- another search field
+                <input id="search-field2" type="text" placeholder="Search here" class="input text-2xl input-bordered input-primary w-full max-w-xs" />
+                <button onclick="searchButton2()" class="btn btn-active btn-primary">Search</button> -->
             </div>
         </section>
         <!-- search result -->
-        <section>
+        <section> 
+            <!-- spinner  -->
+            <div id="loading-dots" class="hidden mx-auto py-4 text-center">
+                <span class="loading loading-dots loading-lg  text-red-500"></span>
+            </div>           
             <div id="phone-container" class="grid gap-4 md:gap-8 lg:gap-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 
+            </div>
+            
+            <!-- loading button -->
+            <div id="show all-container" class="hidden m-5">
+                <button class="btn text-2xl font-[600] hover:bg-green-500 normal-case btn-secondary">Show all</button>
             </div>
         </section>
 
